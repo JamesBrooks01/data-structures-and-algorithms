@@ -7,9 +7,13 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-
 const addOne = (arr) => {
   // Solution code here...
+  let newArray = [];
+  arr.forEach((i) => {
+    newArray.push(i + 1);
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,6 +26,11 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
+  let newArray = [];
+  arr.forEach((i) => {
+    newArray.push(`${i}!`);
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +43,12 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
+  let newArray = [];
+  arr.forEach((i) => {
+    let value = i.toUpperCase();
+    newArray.push(value);
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,17 +56,23 @@ CHALLENGE 4
 
 Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker` that takes in an array of strings and a callback function. 
+Then, write a function named `speaker` that takes in an array of strings and a callback function.
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
+Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
   // Solution code here...
+  return `${word}!`.toUpperCase();
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArray = [];
+  words.forEach((i) => {
+    newArray.push(callback(i));
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,10 +93,15 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,6 +124,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let newArray = [];
+  availableItems.forEach((i) => {
+    if (i.available === true) {
+      newArray.push(i.name);
+    }
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,6 +149,19 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let newArray = [];
+  arr.forEach((i) => {
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+      newArray.push('Fizz Buzz');
+    } else if (i % 5 === 0) {
+      newArray.push('Buzz');
+    } else if (i % 3 === 0) {
+      newArray.push('Fizz');
+    } else {
+      newArray.push(i);
+    }
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -169,7 +215,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
