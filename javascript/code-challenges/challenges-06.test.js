@@ -24,6 +24,9 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
+  return arr.map(a => {
+    return a.name.split('').reduce((a, b) => b + a, '');
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,6 +38,9 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
+  let originalString = str;
+  let newString = `${originalString} The end.`;
+  return newString;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +58,8 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
+  let originalArray = arr;
+  originalArray.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,6 +79,8 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  let originalObject = obj;
+  originalObject.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,6 +98,9 @@ console.log(people[1].isAuthor) prints true
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
+  for(let i = 0; i < people.length; i++) {
+    people[i].isAuthor = true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,7 +120,7 @@ console.log(a) prints [1, 2, 3, 4]
 
 const append = (arr1, arr2) => {
   // Solution code here...
-
+  arr1.push(...arr2);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +136,7 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }])).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
@@ -156,7 +169,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add a property to every object in an array', () => {
     const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
     setStatusAsAuthor(a);
@@ -167,7 +180,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should append the second array to the first', () => {
     const a = [1, 2, 3, 4];
     const b = [5, 6, 7, 8];
