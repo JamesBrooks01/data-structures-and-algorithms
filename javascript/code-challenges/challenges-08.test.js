@@ -54,17 +54,27 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  return charArray.sort((a, b) => {
+    if (a.children.length !== b.children.length) {
+      return a.children.length - b.children.length;
+    } else {
+      return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
+    }
+  }
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
   // Solution code here...
+  let reg = /w/;
+  return reg.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,6 +91,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  let reg = /.(\d)/;
+  return reg.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +104,8 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
+  let reg = /world/;
+  return reg.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,6 +118,13 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let reg = /[A-Z][a-z]*(\s[A-Z][a-z]*)*/g;
+  let newArray = [];
+  newArray = str.match(reg);
+  if (newArray === null) {
+    newArray = [];
+  }
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,6 +135,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let reg = /^[A-J]/;
+  let newArray = [];
+  arr.forEach(i => {
+    if(reg.test(i)) {
+      newArray.push(i);
+    }
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
