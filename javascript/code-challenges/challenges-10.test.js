@@ -7,8 +7,11 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 ------------------------------------------------------------------------------------------------ */
 
-function returnTen(str){
+function returnTen(str) {
   // Solution code here...
+  let splitString = str.split('');
+  splitString.splice(0, splitString.length - 10);
+  return splitString;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,8 +28,15 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
+
 const findMax = (matrix) => {
   // Solution code here...
+  let numberArray = [];
+  for (let i in matrix) {
+    numberArray.push(matrix[i].reduce((a, b) => Math.max(a, b)));
+  }
+  let answer = numberArray.reduce((a, b) => Math.max(a, b));
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +55,16 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let numberArray = [];
+  for (let i in matrix) {
+    numberArray.push(matrix[i].reduce((a, b) => a + b));
+  }
+  if (numberArray.length === 0) {
+    return 0;
+  } else {
+    let answer = numberArray.reduce((a, b) => a + b);
+    return answer;
+  }
 };
 
 
@@ -72,7 +92,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  let salesArray = [];
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let hourTotal = 0;
+    for (let j = 0; j < stores.length; j++) {
+      hourTotal += stores[j][i];
+    }
+    salesArray.push(hourTotal);
+  }
+  return salesArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,6 +115,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let hour = 0;
+  let objectArray = [];
+  data.forEach(element => {
+    let newObject = {sales: `${element} cookies`, time:`${hours[hour]}`};
+    objectArray.push(newObject);
+    hour++;
+  });
+  return objectArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +148,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,6 +171,11 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  if(board[row][col] === '#'){
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -218,20 +260,20 @@ Run your tests from the console: jest challenge-12.test.js
 
 describe('Testing challenge 1', () => {
   test('it should return the last 10 characters of a string as an array', () => {
-    expect(returnTen('hello world')).toStrictEqual(['e','l','l','o',' ','w','o','r','l','d']);
-    expect(returnTen('world')).toStrictEqual(['w','o','r','l','d']);
+    expect(returnTen('hello world')).toStrictEqual(['e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']);
+    expect(returnTen('world')).toStrictEqual(['w', 'o', 'r', 'l', 'd']);
   });
 });
 
 describe('Testing challenge 2', () => {
   test('It should return the max value', () => {
-    expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(24);
+    expect(findMax([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(24);
   });
 });
 
 describe('Testing challenge 3', () => {
   test('It should return the total sum', () => {
-    expect(totalSum([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(81);
+    expect(totalSum([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(81);
     expect(totalSum([])).toStrictEqual(0);
   });
 });
@@ -269,7 +311,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const battleshipData = [
     ['#', ' ', '#', ' '],
     ['#', ' ', '#', ' '],
