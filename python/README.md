@@ -2,6 +2,14 @@
 
 ## Language: `Python`
 
+---
+
+### Table of Contents
+
+- [Code Challenge 01: Array Reverse](./code_challenges/array_reverse/README.md)
+
+---
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
