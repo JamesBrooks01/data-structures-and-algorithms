@@ -7,6 +7,7 @@
 ### Table of Contents
 
 - [Code Challenge 01: Array Reverse](./code_challenges/array_reverse/README.md)
+- [Code Challenge 02: Array Insert Shift](./code_challenges/array-insert-shift/README.md)
 
 ---
 
