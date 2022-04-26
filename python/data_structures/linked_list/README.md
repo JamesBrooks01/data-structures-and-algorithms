@@ -16,14 +16,4 @@ The Big O for this assignment is O(n) for the includes method, and printing out 
 
 Day 02: The Big O for all three added methods are O(n) as all of them will be longer and larger as the input size increases.
 
-## Checklist
-
-- [x] Top-level README “Table of Contents” is updated
-- [x] README for this challenge is complete
-  - [x] Summary, Description, Approach & Efficiency, Solution
-  - [x] Picture of whiteboard
-  - [x] Link to code
-- [x] Feature tasks for this challenge are completed
-- [x] Unit tests written and passing
-
 ![linked_list_insertions](./linked_list_insertions.png)
