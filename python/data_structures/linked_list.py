@@ -13,19 +13,15 @@ class LinkedList:
         return f"{return_string}NULL"
 
     def insert(self, value):
-        # method body here
-        newNode = Node()
-        newNode.value = value
-        newNode.ref = self.head
+        newNode = Node(value, self.head)
         self.head = newNode
 
     def concat_list(self):
         list_item = self.head
         linked_list_string = ""
         while list_item is not None:
-            print("List Item", list_item.value)
             linked_list_string += f"{{ {list_item.value} }} -> "
-            list_item = list_item.ref
+            list_item = list_item.next
         return linked_list_string
 
     def includes(self, value):
@@ -33,19 +29,17 @@ class LinkedList:
         while current is not None:
             if current.value == value:
                 return True
-            current = current.ref
+            current = current.next
         return False
 
     def append(self, value):
         current = self.head
         while current is not None:
-            if current.ref == None:
-                newNode = Node()
-                newNode.value = value
-                newNode.ref = None
-                current.ref = newNode
+            if current.next == None:
+                newNode = Node(value, None)
+                current.next = newNode
                 break
-            current = current.ref
+            current = current.next
 
     def insert_before(self, value, new_value):
         if not self.head or not self.includes(value):
@@ -54,16 +48,14 @@ class LinkedList:
         priorNode = None
         while current is not None:
             if current.value == value:
-                newNode = Node()
-                newNode.value = new_value
-                newNode.ref = current
+                newNode = Node(new_value, current)
                 if priorNode == None:
                     self.head = newNode
                 else:
-                    priorNode.ref = newNode
+                    priorNode.next = newNode
                 break
             priorNode = current
-            current = current.ref
+            current = current.next
 
     def insert_after(self, value, new_value):
         if not self.includes(value):
@@ -71,18 +63,16 @@ class LinkedList:
         current = self.head
         while current is not None:
             if current.value == value:
-                newNode = Node()
-                newNode.value = new_value
-                newNode.ref = current.ref
-                current.ref = newNode
+                newNode = Node(new_value, current.next)
+                current.next = newNode
                 break
-            current = current.ref
+            current = current.next
 
 
 class Node:
-    def __init__(data_node, data = None):
+    def __init__(data_node, data, next):
         data_node.value = data
-        data_node.ref = "NULL"
+        data_node.next = next
 
 
 class TargetError(BaseException):
