@@ -78,7 +78,6 @@ class LinkedList:
         if value > (length - 1) or value < 0:
             raise TargetError
         for x in range(0, (length-1) - value):
-            print(x)
             current = current.next
         return current.value
 
