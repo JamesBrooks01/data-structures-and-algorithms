@@ -9,8 +9,8 @@
 - [Code Challenge 01: Array Reverse](./code_challenges/array_reverse/README.md)
 - [Code Challenge 02: Array Insert Shift](./code_challenges/array-insert-shift/README.md)
 - [Code Challenge 03: Array Binary Search](./code_challenges/array_binary_search/README.md)
-- [Code Challenge 05: Linked List](./data_structures/linked_list/README.md)
-- [Code Challenge 06: Linked List Insertions](./data_structures/linked_list/README.md)
+- [Code Challenge 05: Linked List](./docs/linked_list_insertions/README.md)
+- [Code Challenge 06: Linked List Insertions](./docs/linked_list_insertions/README.md)
 
 ---
 
