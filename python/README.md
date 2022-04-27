@@ -11,6 +11,7 @@
 - [Code Challenge 03: Array Binary Search](./code_challenges/array_binary_search/README.md)
 - [Code Challenge 05: Linked List](./docs/linked_list_insertions/README.md)
 - [Code Challenge 06: Linked List Insertions](./docs/linked_list_insertions/README.md)
+- [Code Challenge 07: Linked List Kth](./docs/linked_list_kth/README.md)
 
 ---
 
