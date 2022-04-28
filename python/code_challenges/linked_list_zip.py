@@ -11,7 +11,6 @@ def zip_lists(a, b):
     new_list.insert(current_1.value)
 
     while new_list:
-        print(current_1.next, current_2.next)
         if current_1.next == None and current_2.next == None:
             new_list.append(current_2.value)
             break
@@ -28,7 +27,6 @@ def zip_lists(a, b):
         new_list.append(current_1.next.value)
         current_1 = current_1.next
         current_2 = current_2.next
-    print(new_list)
 
     return new_list
 
