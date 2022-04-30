@@ -14,3 +14,7 @@ Our challenge was to create a Stack and Queue using a Linked List as the underly
 ## Approach & Efficiency
 
 All 4 methods for both Stacks and Queues are O(1) in both time and space as they only ever interact with one node at a time no matter the length of either and only take in one value at a time.
+
+[Link to Stack Code](../../data_structures/stack.py)
+
+[Link to Queue Code](../../data_structures/queue.py)
