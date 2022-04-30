@@ -13,6 +13,7 @@
 - [Code Challenge 06: Linked List Insertions](./docs/linked_list_insertions/README.md)
 - [Code Challenge 07: Linked List Kth](./docs/linked_list_kth/README.md)
 - [Code Challenge 08: Linked List Zip](./docs/linked_list_zip/README.md)
+- [Code Challenge 10: Stacks and Queues](./docs/stack_and_queue/README.md)
 
 ---
 
