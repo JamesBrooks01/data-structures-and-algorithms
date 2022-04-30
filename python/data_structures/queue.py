@@ -7,9 +7,31 @@ class Queue:
     """
 
     def __init__(self):
-        # initialization here
-        pass
+        self.front_of_queue = None
+        self.back_of_queue = None
 
-    def some_method(self):
-        # method body here
-        pass
+    def enqueue(self, value):
+        new_addition = Node(value)
+        if self.back_of_queue:
+            self.back_of_queue.next = new_addition
+        self.back_of_queue = new_addition
+        if not self.front_of_queue:
+            self.front_of_queue = self.back_of_queue
+
+    def dequeue(self):
+        if not self.front_of_queue:
+            raise InvalidOperationError("Queue Empty, Try Again Later")
+        old_front_of_queue = self.front_of_queue
+        self.front_of_queue = old_front_of_queue.next
+        return old_front_of_queue.value
+
+    def peek(self):
+        if not self.front_of_queue:
+            raise InvalidOperationError("Queue Empty, Try Again Later")
+        return self.front_of_queue.value
+
+    def IsEmpty(self):
+        if self.front_of_queue == None:
+            return True
+        else:
+            return False

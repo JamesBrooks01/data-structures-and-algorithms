@@ -82,7 +82,7 @@ class LinkedList:
         return current.value
 
 class Node:
-    def __init__(data_node, data, next):
+    def __init__(data_node, data, next=None):
         data_node.value = data
         data_node.next = next
 
