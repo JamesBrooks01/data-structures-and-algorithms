@@ -10,9 +10,9 @@ class PseudoQueue:
         self.inbox.push(value)
 
     def dequeue(self):
-        empty_result = self.outbox.is_empty()
+        outbox_result = self.outbox.is_empty()
         inbox_result = self.inbox.is_empty()
-        if empty_result:
+        if outbox_result:
             while inbox_result == False:
                 in_value = self.inbox.pop()
                 self.outbox.push(in_value)
