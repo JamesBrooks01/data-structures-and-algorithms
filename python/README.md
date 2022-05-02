@@ -14,6 +14,7 @@
 - [Code Challenge 07: Linked List Kth](./docs/linked_list_kth/README.md)
 - [Code Challenge 08: Linked List Zip](./docs/linked_list_zip/README.md)
 - [Code Challenge 10: Stacks and Queues](./docs/stack_and_queue/README.md)
+- [Code Challenge 11: Stack Queue Pseudo](./docs/stack_queue_pseudo/README.md)
 
 ---
 
