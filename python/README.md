@@ -15,6 +15,7 @@
 - [Code Challenge 08: Linked List Zip](./docs/linked_list_zip/README.md)
 - [Code Challenge 10: Stacks and Queues](./docs/stack_and_queue/README.md)
 - [Code Challenge 11: Stack Queue Pseudo](./docs/stack_queue_pseudo/README.md)
+- [Code Challenge 12: Stack Queue Animal Shelter](./docs/stack_queue_animal_shelter/README.md)
 
 ---
 
