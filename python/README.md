@@ -16,6 +16,7 @@
 - [Code Challenge 10: Stacks and Queues](./docs/stack_and_queue/README.md)
 - [Code Challenge 11: Stack Queue Pseudo](./docs/stack_queue_pseudo/README.md)
 - [Code Challenge 12: Stack Queue Animal Shelter](./docs/stack_queue_animal_shelter/README.md)
+- [Code Challenge 13: Stack Queue Brackets](./docs/stack_queue_brackets/README.md)
 
 ---
 
