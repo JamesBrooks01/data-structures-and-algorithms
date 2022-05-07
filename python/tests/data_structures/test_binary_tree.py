@@ -2,30 +2,47 @@ import pytest
 from data_structures.binary_tree import BinaryTree, Node
 
 
-def test_exists():
+# @pytest.mark.skip("TODO")
+def test_node_exists():
+    assert Node
+
+
+# @pytest.mark.skip("TODO")
+def test_create_node():
+    node = Node("apple")
+    assert node
+    assert node.left is None
+    assert node.right is None
+
+
+# @pytest.mark.skip("TODO")
+def test_tree_exists():
     assert BinaryTree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
+def test_tree_root_exists():
+    tree = BinaryTree()
+    assert tree.root is None
+
+
+# @pytest.mark.skip("TODO")
 def test_pre_order(tree):
-    actual = []
-    tree.pre_order(actual.append)
+    actual = tree.pre_order()
     expected = ["a", "b", "d", "e", "c", "f", "g"]
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_in_order(tree):
-    actual = []
-    tree.in_order(actual.append)
-    expected = ["d", "b", "e", "a", "f", "c", "g"]
+    actual = tree.in_order()
+    expected = ["d", "b", "e", "a", "f", "c", "g"]  # left, root, right
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_post_order(tree):
-    actual = []
-    tree.post_order(actual.append)
+    actual = tree.post_order()
     expected = ["d", "e", "b", "f", "g", "c", "a"]
     assert actual == expected
 
@@ -36,6 +53,10 @@ def tree():
           a
       b      c
     d  e    f  g
+
+    ["a", "b", "d", "e", "c", "f", "g"] - pre order
+    ["d", "b", "e", "a", "f", "c", "g"] # in order - left, root, right
+
     """
 
     tree = BinaryTree()
