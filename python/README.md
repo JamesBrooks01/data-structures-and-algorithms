@@ -17,6 +17,7 @@
 - [Code Challenge 11: Stack Queue Pseudo](./docs/stack_queue_pseudo/README.md)
 - [Code Challenge 12: Stack Queue Animal Shelter](./docs/stack_queue_animal_shelter/README.md)
 - [Code Challenge 13: Stack Queue Brackets](./docs/stack_queue_brackets/README.md)
+- [Code Challenge 15: Trees](./docs/trees/README.md)
 
 ---
 
