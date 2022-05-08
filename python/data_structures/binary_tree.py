@@ -1,16 +1,44 @@
 class BinaryTree:
-    """
-    Put docstring here
-    """
 
     def __init__(self):
-        # initialization here
-        pass
+        self.root = None
 
-    def some_method(self):
-        # method body here
-        pass
+    def pre_order(self):
+        def traverse(root, values):
+            if not root:
+                return
+            values.append(root.value)
+            traverse(root.left, values)
+            traverse(root.right, values)
+        values = []
+        traverse(self.root, values)
+        return values
+
+    def in_order(self):
+        def traverse(root, values):
+            if not root:
+                return
+            traverse(root.left, values)
+            values.append(root.value)
+            traverse(root.right, values)
+        values = []
+        traverse(self.root, values)
+        return values
+
+    def post_order(self):
+        def traverse(root, values):
+            if not root:
+                return
+            traverse(root.left, values)
+            traverse(root.right, values)
+            values.append(root.value)
+        values = []
+        traverse(self.root, values)
+        return values
 
 
 class Node:
-    pass
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
