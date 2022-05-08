@@ -45,6 +45,6 @@ class BinarySearchTree(BinaryTree):
                     return False
         answer = traverse(self.root, value)
         if answer == True:
-            return True
+            return answer
         else:
             return False
