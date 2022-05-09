@@ -36,6 +36,18 @@ class BinaryTree:
         traverse(self.root, values)
         return values
 
+    def find_maximum_value(self):
+        def traverse(root, value):
+            if not root:
+                return
+            if root.value > value[0]:
+                value.pop()
+                value.append(root.value)
+            traverse(root.left, value)
+            traverse(root.right, value)
+        final_value = [0]
+        traverse(self.root, final_value)
+        return int(final_value[0])
 
 class Node:
     def __init__(self, value):
