@@ -18,6 +18,7 @@
 - [Code Challenge 12: Stack Queue Animal Shelter](./docs/stack_queue_animal_shelter/README.md)
 - [Code Challenge 13: Stack Queue Brackets](./docs/stack_queue_brackets/README.md)
 - [Code Challenge 15: Trees](./docs/trees/README.md)
+- [Code Challenge 16: Tree Maximum Value](./docs/tree_max/README.md)
 
 ---
 
