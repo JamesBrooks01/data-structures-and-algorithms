@@ -19,6 +19,7 @@
 - [Code Challenge 13: Stack Queue Brackets](./docs/stack_queue_brackets/README.md)
 - [Code Challenge 15: Trees](./docs/trees/README.md)
 - [Code Challenge 16: Tree Maximum Value](./docs/tree_max/README.md)
+- [Code Challenge 17: Tree Breadth First](./docs/tree_breadth_first/README.md)
 
 ---
 
