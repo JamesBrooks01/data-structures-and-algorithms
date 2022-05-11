@@ -1,3 +1,6 @@
+from data_structures.queue import Queue
+
+
 class BinaryTree:
 
     def __init__(self):
@@ -49,8 +52,27 @@ class BinaryTree:
         traverse(self.root, final_value)
         return int(final_value[0])
 
+    def add(self,value):
+        node = Node(value)
+        if not self.root:
+            self.root = node
+            return
+        breadth = Queue()
+        breadth.enqueue(self.root)
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            if not front.left:
+                front.left = node
+                return
+            else:
+                breadth.enqueue(front.left)
+            if not front.right:
+                front.right = node
+                return
+            else:
+                breadth.enqueue(front.right)
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, left = None, right = None):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right
