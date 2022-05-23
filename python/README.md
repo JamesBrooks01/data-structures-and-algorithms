@@ -21,6 +21,7 @@
 - [Code Challenge 16: Tree Maximum Value](./docs/tree_max/README.md)
 - [Code Challenge 17: Tree Breadth First](./docs/tree_breadth_first/README.md)
 - [Code Challenge 18: Tree Fizz Buzz](./docs/tree_fizz_buzz/README.md)
+- [Code Challenge 20: Insertion Sort](../sorting/insertion/README.md)
 
 ---
 
