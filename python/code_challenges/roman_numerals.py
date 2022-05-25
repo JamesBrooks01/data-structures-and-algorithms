@@ -10,10 +10,9 @@ roman_numerals = {
 
 def roman_counter(str):
   total = 0
-  roman_list = list(str)
-  for current in range(len(roman_list)-1):
-    left = roman_list[current]
-    right = roman_list[current+1]
+  for current in range(len(str)-1):
+    left = str[current]
+    right = str[current+1]
     current_num = roman_numerals[left]
     next_num = roman_numerals[right]
     if current_num < next_num:
@@ -21,6 +20,6 @@ def roman_counter(str):
     total += current_num
 
   if str:
-    last = roman_list[-1]
+    last = str[-1]
     total += roman_numerals[last]
   return total
