@@ -22,6 +22,7 @@
 - [Code Challenge 17: Tree Breadth First](./docs/tree_breadth_first/README.md)
 - [Code Challenge 18: Tree Fizz Buzz](./docs/tree_fizz_buzz/README.md)
 - [Code Challenge 20: Insertion Sort](../sorting/insertion/README.md)
+- [Code Challenge 21: Merge Sort](../sorting/merge/README.md)
 
 ---
 
