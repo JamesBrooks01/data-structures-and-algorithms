@@ -23,6 +23,7 @@
 - [Code Challenge 18: Tree Fizz Buzz](./docs/tree_fizz_buzz/README.md)
 - [Code Challenge 20: Insertion Sort](../sorting/insertion/README.md)
 - [Code Challenge 21: Merge Sort](../sorting/merge/README.md)
+- [Code Challenge 22: Roman Numerals](./docs/roman_numerals/README.md)
 
 ---
 
