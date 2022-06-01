@@ -25,6 +25,7 @@
 - [Code Challenge 21: Merge Sort](../sorting/merge/README.md)
 - [Code Challenge 22: Roman Numerals](./docs/roman_numerals/README.md)
 - [Code Challenge Class 31: Hashtable Repeated Word](./docs/hashtable_repeated_word/README.md)
+- [Code Challenge Class 30: Hashtable](./docs/hashtable/README.md)
 
 ---
 
