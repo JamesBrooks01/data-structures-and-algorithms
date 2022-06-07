@@ -29,6 +29,7 @@
 - [Code Challenge Class 32: Tree Intersection](./docs/tree_intersection/README.md)
 - [Code Challenge Class 33: Hashtable Left Join](./docs/hashtable_left_join/README.md)
 - [Code Challenge Class 35: Graph Implementation](./docs/graph/README.md)
+- [Code Challenge Class 36: Graph Breadth First](./docs/graph_breadth_first/README.md)
 
 ---
 

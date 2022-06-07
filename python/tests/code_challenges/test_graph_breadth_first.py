@@ -6,16 +6,40 @@ def test_exists():
     assert Graph
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_bfs(graph):
     nodes = graph.get_nodes()
     root = nodes[0]
-    print(root.value)
     actual = graph.breadth_first(root)
     expected = ["Pandora", "Arendelle", "Metroville", "Monstropolis", "Narnia", "Naboo"]
     assert actual == expected
 
-    # DANGER: Metroville/Monstropolis could be switched as well as Narnia/Naboo and still be valid BFS. What to do?
+# @pytest.mark.skip("TODO")
+def test_bfs_len(graph):
+    nodes = graph.get_nodes()
+    root = nodes[0]
+    list = graph.breadth_first(root)
+    actual = len(list)
+    expected = 6
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_no_children():
+    graph = Graph()
+    graph.add_node("Test")
+    nodes = graph.get_nodes()
+    root = nodes[0]
+    actual = graph.breadth_first(root)
+    expected = ["Test"]
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_no_graph():
+    graph = Graph()
+    actual = graph.breadth_first("root")
+    expected = []
+    assert actual == expected
+
 
 
 @pytest.fixture
