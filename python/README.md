@@ -30,6 +30,7 @@
 - [Code Challenge Class 33: Hashtable Left Join](./docs/hashtable_left_join/README.md)
 - [Code Challenge Class 35: Graph Implementation](./docs/graph/README.md)
 - [Code Challenge Class 36: Graph Breadth First](./docs/graph_breadth_first/README.md)
+- [Code Challenge Class 37: Graph Business Trip](./docs/graph_business_trip/README.md)
 
 ---
 
