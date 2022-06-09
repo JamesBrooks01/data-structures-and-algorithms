@@ -1,4 +1,5 @@
 from data_structures.queue import Queue
+from data_structures.stack import Stack
 
 class Graph:
     def __init__(self):
@@ -44,9 +45,26 @@ class Graph:
                     final_list.append(edge.vertex.value)
         return final_list
 
+    def depth_first_search(self, vertex):
+        if self.adjacency_list == {}:
+            return []
+        def traverse(node):
+            final_list.append(node.value)
+            neighbors = self.get_neighbors(node)
+            for edge in neighbors:
+                if edge.vertex.visited == 0:
+                    edge.vertex.visited = 1
+                    node.visited = 1
+                    traverse(edge.vertex)
+
+        final_list = []
+        traverse(vertex)
+        return final_list
+
 class Vertex:
-    def __init__(self,value):
+    def __init__(self,value, visited=0):
         self.value = value
+        self.visited = visited
 
 class Edge:
     def __init__(self, vertex, weight):
